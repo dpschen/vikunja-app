@@ -10,6 +10,11 @@ jobs:
   build-app:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      APPLE_ID: ${{ secrets.APPLE_ID }}
+      ITC_TEAM_ID: ${{ secrets.ITC_TEAM_ID }}
+      TEAM_ID: ${{ secrets.TEAM_ID }}
+      MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
@@ -33,6 +38,11 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    env:
+      APPLE_ID: ${{ secrets.APPLE_ID }}
+      ITC_TEAM_ID: ${{ secrets.ITC_TEAM_ID }}
+      TEAM_ID: ${{ secrets.TEAM_ID }}
+      MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
