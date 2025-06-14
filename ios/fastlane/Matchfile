@@ -1,4 +1,4 @@
-git_url("git@git.jfdev.de:JonasFranzDEV/match.git")
+git_url(ENV["MATCH_GIT_URL"])
 
 storage_mode("git")
 
